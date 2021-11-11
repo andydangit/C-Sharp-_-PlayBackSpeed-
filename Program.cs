@@ -47,7 +47,7 @@ namespace PlayBackSpeed
             Console.WriteLine(totalTimes.ToString());
 
 
-            
+            // Bugs: it does not show the length of speed if you input it for the total Second
 
 
         }
