@@ -14,37 +14,30 @@ namespace PlayBackSpeed
 
             //  Ask user for the input in length 
             Console.Write("how many hours: ");
-            string userHours = Console.ReadLine();
-            double hours = Convert.ToDouble( (userHours));
-            double totalHoursInMinutes = hours * 60;
+            double Hours = Convert.ToDouble (Console.ReadLine());
+            double totalHoursInMinutes = Hours * 60;
 
             // Ask user for the total minutes 
             Console.Write("how many minutes: ");
-            string userMinutes = Console.ReadLine();
-            double minutes = Convert.ToDouble( (userMinutes));
-
+            double  minutes = Convert.ToDouble( Console.ReadLine());
 
             // Ask user for the total Second
             Console.Write("how many second: ");
-            string userSecond = Console.ReadLine();
-            double second = Convert.ToDouble( (userSecond));
+            double second = Convert.ToDouble( Console.ReadLine());
 
             //total lenght in minutes 
             double totalMinutes = (totalHoursInMinutes + minutes) + (second / 100);
 
             // what is the playback Speed 
             Console.Write("What is the playback speed? ");
-            string userPlaySpeed = Console.ReadLine();
-            float PlaySpeed = float.Parse(userPlaySpeed);
-
-
+            double PlaySpeed = Convert.ToDouble( Console.ReadLine());
 
 
             // Calculate the total playback Speed 
             double totalTimes = ((100 * totalMinutes) / (100 * PlaySpeed));
 
 
-            Console.WriteLine(totalTimes.ToString());
+            Console.WriteLine("If you increase your audio speed by {0}, it will reduce your playback length to {1} minutes", PlaySpeed, Math.Round(totalTimes, 2));
 
 
 
